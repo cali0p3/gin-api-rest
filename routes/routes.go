@@ -1,0 +1,12 @@
+package routes
+
+import (
+	"github.com/cali0p3/api-go-gin/controllers"
+	"github.com/gin-gonic/gin"
+)
+
+func HandleRequests() {
+	r := gin.Default()
+	r.GET("/alunos", controllers.ExibeTodosAlunos)
+	r.Run()
+}
